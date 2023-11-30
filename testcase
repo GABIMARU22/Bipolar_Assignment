@@ -1,0 +1,25 @@
+import static org.junit.Assert.assertEquals;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import org.junit.Test;
+
+public class HelloWorldTest {
+
+    @Test
+    public void testHelloWorldPageContent() throws IOException {
+        String filePath = "path_to_your_index.jsp/index.jsp";
+        StringBuilder contentBuilder = new StringBuilder();
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                contentBuilder.append(line);
+            }
+        }
+
+        String expectedContent = "<html><head><title>Hello, World!</title></head><body><h1>Hello, World!</h1></body></html>";
+
+        assertEquals("Content mismatch: ", expectedContent, contentBuilder.toString());
+    }
+}
