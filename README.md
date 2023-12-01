@@ -14,4 +14,41 @@ This is a simple CI/CD project which is done using Jenkins, In this project we w
 7. Grafana
 8. Maven 
 
-# Configuring all the tolls
+# Configuring all the tools
+
+1. Installing Jenkins and maven
+   
+   Jenkins Server Details
+   ,,,
+      Operating System     : Ubuntu
+   
+      Hostname             : jenkins-ansible
+   
+      RAM                  : 2 GB
+   
+      CPU                  : 1 Core
+   
+      EC2 Instance         : t2.small
+   ,,,
+
+ 3. Install Java
+    
+    java -version
+    apt-get install openjdk-11-jdk 
+    java -version
+
+ 4. Install Jenkins
+
+     curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+    /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+
+    echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+    sudo apt-get update
+    sudo apt-get install jenkins=2.361.3 -y
+
+5. INSTALL MAVEN
+   
+   
