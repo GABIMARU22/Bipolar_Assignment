@@ -1,9 +1,9 @@
 # Bipolar_Assignment
-Objective
+# Objective
 
 This is a simple CI/CD project which is done using Jenkins, In this project we will deploy a simple hello world webapp using jenkins and monitor using prometheus and grafana
 
-Tools Used
+# Tools Used
 
 1. Github
 2. Jenkins
@@ -13,3 +13,5 @@ Tools Used
 6. Prometheus
 7. Grafana
 8. Maven 
+
+# Configuring all the tolls
